@@ -88,6 +88,8 @@ int main()
 	fprintf(stderr,"\n error in receiving");
     buffer[n] = '\0';
     printf("\nServer : %s\n", buffer);
+    if(buffer[n-2]!='!')
+    {	    
 	if(node_count>=MAX_NODES)
 	   {head=deletenode(head); 
             
@@ -97,7 +99,7 @@ int main()
     displaynode(head);
     close(sockfd);
     }
-
+    }
 
 	}break;
 	
